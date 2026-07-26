@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Center</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>COMPUTER <span>CENTER</span></h1>
+  <div class="subtitle">Diseña y configura tu propia computadora personal de videojuegos</div>
+</header>
+<div class="trace"></div>
+
+<main>
+  <form id="pcForm">
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">01</span><h2>Gabinete</h2></div>
+      <div class="panel-body">
+        <select id="gabinete" name="gabinete">
+          <option value="700">Minitorre — $700</option>
+          <option value="1200">Torre — $1200</option>
+          <option value="550">Desktop — $550</option>
+          <option value="2500">Gamer — $2500</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">02</span><h2>Procesador</h2></div>
+      <div class="panel-body">
+        <select id="procesador" name="procesador">
+          <option value="900">Celeron — $900</option>
+          <option value="1500">Intel i3 — $1500</option>
+          <option value="3500">Intel i5 — $3500</option>
+          <option value="5000">Intel i7 — $5000</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">03</span><h2>Disco Duro</h2></div>
+      <div class="panel-body">
+        <select id="disco" name="disco">
+          <option value="500">500GB — $500</option>
+          <option value="800">750GB — $800</option>
+          <option value="1000">1TB — $1000</option>
+          <option value="900">250 GB SSD — $900</option>
+          <option value="1380">500 GB SSD — $1380</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">04</span><h2>Memoria RAM</h2></div>
+      <div class="panel-body">
+        <select id="ram" name="ram">
+          <option value="600">4 GB — $600</option>
+          <option value="1050">8 GB — $1050</option>
+          <option value="1950">16 GB — $1950</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">05</span><h2>Monitor</h2></div>
+      <div class="panel-body">
+        <select id="monitor" name="monitor">
+          <option value='17&quot;'>17"</option>
+          <option value='19&quot;'>19"</option>
+          <option value='21.5&quot;'>21.5"</option>
+          <option value='24&quot;'>24"</option>
+          <option value='27&quot;'>27"</option>
+          <option value='32&quot;'>32"</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><span class="tag">06</span><h2>Accesorios</h2></div>
+      <div class="panel-body">
+        <div class="accesorios-grid" id="accesorios">
+          <label class="chk"><input type="checkbox" value="Mouse|250"> Mouse <span class="price">$250</span></label>
+          <label class="chk"><input type="checkbox" value="Teclado|350"> Teclado <span class="price">$350</span></label>
+          <label class="chk"><input type="checkbox" value="Bocinas|300"> Bocinas <span class="price">$300</span></label>
+          <label class="chk"><input type="checkbox" value="Webcam|450"> Webcam <span class="price">$450</span></label>
+          <label class="chk"><input type="checkbox" value="UPS|900"> UPS <span class="price">$900</span></label>
+          <label class="chk"><input type="checkbox" value="Alfombrilla|150"> Alfombrilla <span class="price">$150</span></label>
+          <label class="chk"><input type="checkbox" value="Control Gamer|600"> Control Gamer <span class="price">$600</span></label>
+          <label class="chk"><input type="checkbox" value="Luz RGB|280"> Luz RGB <span class="price">$280</span></label>
+          <label class="chk"><input type="checkbox" value="Silla Gamer|3200"> Silla Gamer <span class="price">$3200</span></label>
+          <label class="chk"><input type="checkbox" value="Adaptador WiFi|350"> Adaptador WiFi <span class="price">$350</span></label>
+          <label class="chk"><input type="checkbox" value="Hub USB|220"> Hub USB <span class="price">$220</span></label>
+          <label class="chk"><input type="checkbox" value="Audífonos|500"> Audífonos <span class="price">$500</span></label>
+          <label class="chk"><input type="checkbox" value="Monitor adicional|2200"> Monitor adicional <span class="price">$2200</span></label>
+          <label class="chk"><input type="checkbox" value="Soporte|400"> Soporte <span class="price">$400</span></label>
+          <label class="chk"><input type="checkbox" value="Ventilador|350"> Ventilador <span class="price">$350</span></label>
+          <label class="chk"><input type="checkbox" value="Micrófono|700"> Micrófono <span class="price">$700</span></label>
+          <label class="chk"><input type="checkbox" value="Lector SD|180"> Lector SD <span class="price">$180</span></label>
+          <label class="chk"><input type="checkbox" value="Cable HDMI|120"> Cable HDMI <span class="price">$120</span></label>
+          <label class="chk"><input type="checkbox" value="Base refrigerante|450"> Base refrigerante <span class="price">$450</span></label>
+          <label class="chk"><input type="checkbox" value="Caja de herramientas|380"> Caja de herramientas <span class="price">$380</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h2>Resumen de tu equipo</h2>
+      <div id="resultado"></div>
+      <div class="total-line">
+        <span class="label">TOTAL</span>
+        <span class="amount" id="totalAmount">$0.00</span>
+      </div>
+      <button type="submit">Calcular Total</button>
+    </div>
+
+  </form>
+</main>
+
+<footer>
+  Elaborado por: Hector uribe <span class="dot">·</span> Proyecto de Formulario <span class="dot">·</span> © 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
